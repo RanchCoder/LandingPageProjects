@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Variables</title>
+</head>
+
+<body>
+
+    <header id="Main-Header">
+        <h1>CSS Variables</h1>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <div class="box">
+                <h1>Hello World</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, placeat ea perferendis eveniet
+                    libero molestiae repellat ad, illo repellendus earum incidunt culpa obcaecati explicabo eaque
+                    dolore, eligendi facilis non. Nemo error beatae cupiditate aspernatur odio libero magnam suscipit
+                    non. Rerum ipsa corrupti tempora laudantium labore dolores nisi asperiores quasi.
+
+                </p>
+            </div>
+
+            <div class="box">
+                <h1>Hello World</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero maiores, placeat ea perferendis eveniet
+                    libero molestiae repellat ad, illo repellendus earum incidunt culpa obcaecati explicabo eaque
+                    dolore, eligendi facilis non. Nemo error beatae cupiditate aspernatur odio libero magnam suscipit
+                    non. Rerum ipsa corrupti tempora laudantium labore dolores nisi asperiores quasi.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const box = document.querySelector('.box');
+        const boxStyle = getComputedStyle(box);
+        const boxMainColor = boxStyle.getPropertyValue('--box-main-color');
+
+        console.log(boxMainColor);
+
+        const header = document.querySelector('#Main-Header');
+        header.style.setProperty('--header-background-color',boxMainColor);
+
+    </script>
+
+</body>
+
+</html>

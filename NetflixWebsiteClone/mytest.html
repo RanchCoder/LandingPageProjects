@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+     .top{
+         display:grid;
+         grid-template-columns:repeat(3,1fr);
+         grid-gap:1rem;
+         cursor:pointer;
+         margin-bottom:50px;
+         background:#999;
+         padding-top:10px;
+         align-content:center;
+         justify-content: center;
+         text-align: center;
+         
+     }
+
+     .tab-border{
+         border-bottom:3px solid red;
+     }
+
+     .tab-content{
+         justify-content: center;
+         align-content: center;
+         
+     }
+
+     #tab-1-content,
+     #tab-2-content,
+     #tab-3-content{
+         display:none;
+         
+     }
+
+     .show{
+         display:block !important;
+     }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="top">
+            <div id="tab-1" class="active tab-image tab-border">first</div>
+            <div id="tab-2" class="tab-image">second</div>
+            <div id="tab-3" class="tab-image">third</div>
+        </div>
+        <div id="tab-content">
+            <div id="tab-1-content" class="tab-content  show">
+                <img src="images/tab2.png" alt="">
+                
+            </div>
+            <div id="tab-2-content" class="tab-content">
+                <img src="images/tab2.2.png" alt="">
+            </div>
+            <div id="tab-3-content" class="tab-content">
+                <img src="images/tab-content-2-3.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+<script src="js/myTest.js"></script>
+</html>
